@@ -177,7 +177,7 @@ button,
 html input[type="button"],
 input[type="reset"],
 input[type="submit"] {
-    -webkit-appearance: button;
+    --webkit-appearance: button;
     cursor: pointer
 }
 
@@ -208,7 +208,7 @@ input[type="number"]::-webkit-outer-spin-button {
 }
 
 input[type="search"] {
-    -webkit-appearance: textfield;
+    --webkit-appearance: textfield;
     box-sizing: content-box
 }
 
@@ -732,7 +732,7 @@ body {
     left: 0;
     width: 30px;
     height: 4px;
-    background-color: #bb0fff
+    background-color: #703786
 }
 
 .intro--banner h1 {
@@ -758,7 +758,7 @@ body {
     left: 23px;
     right: 0;
     height: 100%;
-    background-color: #d70fff;
+    background-color: #ab12ca;
     z-index: -1;
     -webkit-transition: left .2s ease-in-out;
     transition: left .2s ease-in-out
@@ -1148,13 +1148,12 @@ body {
     max-width: 900px;
     height: 100%;
     margin: 0 auto;
-    padding: 20px;
 }
 
 /* Banner Section Styles */
 .about--banner {
     position: relative;
-    height: 475px;
+    height: 250px;
 }
 
 .about--banner::before {
@@ -1180,12 +1179,16 @@ body {
 }
 
 .about--banner h2 {
-    position: relative;
-    margin-top: 35px;
-    font-size: 68px;
-    font-weight: 900;
-    line-height: 1;
-    z-index: 1;
+    font-size: 18px ;
+    display: block; 
+    font-weight: Normal; 
+    line-height: 1.2; 
+    letter-spacing: 1px; 
+    color: #fff; 
+    font-family: 'Poppins', sans-serif; 
+    text-transform: uppercase; 
+    margin-bottom: 20px ; 
+    padding-top: 10px;
 }
 
 .about--banner h2::before {
@@ -1239,7 +1242,7 @@ body {
 /* Options Section */
 .about--options {
     display: flex;
-    margin-top: -120px;
+    /* margin-top: -120px; */
     list-style: none;
     flex-wrap: wrap;
     gap: .2rem;
@@ -1278,15 +1281,13 @@ body {
 
 .about--options > a:active {
     position: fixed;
-    top: 30%;
-    left: 50%;
-    transform: translate(-50%, -50%) scale(3);
-    width: 200vw;
-    height: 100vh;
+    top: 20%;
+    left: 30%;
+    width: 40%;
+    height: 70%;
     z-index: 9999;
     display: flex;
-    align-items: center;
-    justify-content: center;
+    
 }
 
 .about--options h3 {
@@ -1313,7 +1314,16 @@ body {
     }
 
     .about--banner img {
-        width: 250px;
+        position: fixed;
+        top: 30%;
+        left: 50%;
+        transform: translate(-50%, -50%) scale(3);
+        width: 200vw;
+        height: 100vh;
+        z-index: 9999;
+        display: flex;
+        align-items: center;
+        justify-content: center;
     }
 }
 
@@ -1327,88 +1337,60 @@ body {
     }
 
     .about--banner img {
-        width: 200px;
+        position: fixed;
+    top: 30%;
+    left: 50%;
+    transform: translate(-50%, -50%) scale(3);
+    width: 200vw;
+    height: 100vh;
+    z-index: 9999;
+    display: flex;
+    align-items: center;
+    justify-content: center;
     }
 
     .about--options > a {
-        width: 48%;  /* Two items per row on tablets */
-        height: 250px;
+        width: 12%;  /* Two items per row on tablets */
+        height: 150px;
+        z-index: 9999;
     }
 }
 
-@media (max-width: 767px) {
-    .about--banner {
-        height: 305px;
-    }
 
-    .about--banner::before {
-        top: 0;
-        left: 125px;
+@media(max-width: 600px) {
+    .about{
+        height: 580px;
     }
-
-    .about--banner::after {
-        top: 35px;
-        left: 260px;
-    }
-
-    .about--banner h2 {
-        margin-top: 10px;
-        font-size: 44px;
-    }
-
-    .about--banner h2::before {
-        top: 28px;
-        left: 168px;
-    }
-
-    .about--banner h2::after {
-        top: 163px;
-        left: 163px;
-    }
-
-    .about--banner img {
-        width: 180px;
-        display: none;
-        scale: 1;
-    }
-
-    .about--options {
-        display: block;
-        padding: 10px;
-    }
-
-    .about--options > a {
-        width: 100%; /* Single column on mobile */
-        height: 200px;
-    }
-}
-
-@media (max-width: 600px) {
     .about--banner {
         height: auto;
     }
 
     .about--banner h2 {
         margin-top: 0;
-        font-size: 40px;
+        font-size: 12px;
     }
 
     .about--banner img {
-        display: none;
-        scale: 1;
+        display: flex;
+        width: 100%;
+        height: 100%;
     }
 
     .about--options {
-        display: block;
+        display: flex;
+        height: 150px;
+        z-index: 9999;
     }
 
     .about--options > a {
-        width: 40%; /* Full width on smaller mobile devices */
-        height: 250px;
+        width: 10%;
+        height: 150px;
+        z-index: 9999;
+
     }
+    
+
 }
-
-
 .contact {
     position: fixed;
     top: 0;
@@ -2146,6 +2128,79 @@ body {
     font-size: 0.9rem;
   }
   
+/* Responsive Styles */
+@media (max-width: 1024px) {
+    .experience {
+        gap: 1rem; /* Reduce the gap between cards */
+    }
+    
+    .card, .card1 {
+        width: 250px; /* Reduce card width */
+        padding: 1.5rem;
+    }
+}
+
+@media (max-width: 768px) {
+    .container1 h1 {
+        font-size: 1.5rem;
+    }
+
+    .experience {
+        margin-top: 80px; /* Reduce margin-top */
+    }
+
+    .card, .card1 {
+        width: 200px; /* Further reduce card width */
+        padding: 1rem;
+    }
+
+    .card h3, .card1 h3, .card h2, .card1 h2 {
+        font-size: 1.2rem; /* Reduce font size */
+    }
+}
+
+@media (max-width: 480px) {
+    .container1 {
+        padding: 0 10px; /* Add padding for smaller screens */
+    }
+
+    .experience {
+        display: flex;
+        gap: .1rem;
+        justify-content: center;
+        align-items: center;
+        flex-wrap: wrap;
+        width: 90%; 
+        margin-top: 0px;
+        scale: 1;
+         /* Ensures it takes full width */ /* Optional: Adjust the max-width for a more contained layout */  
+        
+    }
+
+    .card, .card1 {
+        width: 100%; /* Full width for small screens */
+        padding: 1rem;
+    }
+
+    .card h3, .card1 h3, .card h2, .card1 h2 {
+        font-size: 1rem; /* Smaller font size */
+    }
+
+    .card ul, .card1 ul {
+        list-style: none;
+        padding: 0;
+        display: flex;
+        flex-wrap: wrap;  /* Allow the list items to wrap */
+        gap: 1rem;
+    }
+
+    .card li, .card1 li {
+        display: flex;
+        flex-direction: column;  /* Stack the text and sub-item vertically */
+        width: 45%;  /* Make each item take up 45% of the card width */
+        margin-bottom: 1rem;
+    }
+}
   
   .button1
   {
