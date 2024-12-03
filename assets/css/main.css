@@ -1150,9 +1150,11 @@ body {
 /* Banner Section Styles */
 .about--banner {
     position: relative;
-    height: 250px;
+    height: 400px;
 }
-
+.about--banner h1{
+    font-size: 20px;
+}
 .about--banner::before {
     content: "";
     position: absolute;
@@ -1371,11 +1373,13 @@ body {
         display: flex;
         width: 100%;
         height: 100%;
+        z-index: 9999;
     }
 
     .about--options {
         display: flex;
-        height: 150px;
+        width: 280%;
+        height: 250px;
         z-index: 9999;
     }
 
