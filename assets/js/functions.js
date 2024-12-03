@@ -278,3 +278,15 @@ $( document ).ready(function() {
   transitionLabels();
 
 });
+const images = document.querySelectorAll('.about--options > a');
+
+images.forEach((image) => {
+  image.addEventListener('click', (e) => {
+    // Check if the image is already zoomed in
+    if (image.classList.contains('zoomed-in')) {
+      image.classList.remove('zoomed-in');
+    } else {
+      image.classList.add('zoomed-in');
+    }
+  });
+});
