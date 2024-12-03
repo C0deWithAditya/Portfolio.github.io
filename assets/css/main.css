@@ -873,7 +873,9 @@ body {
     .intro--options {
         display: scroll;
         margin-top: 0px;
-        scroll-behavior: smooth;
+        scale: 1;
+        gap: 0px;
+        font-size: 11px;
     }
 }
 
