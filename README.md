@@ -1,1 +1,1 @@
-https://github.com/C0deWithAditya/Portfolio.github.io
+https://c0dewithaditya.github.io/Portfolio.github.io/
